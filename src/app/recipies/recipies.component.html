@@ -1,29 +1,38 @@
 <div class="container">
+  <h4>Wypełnij formularz aby dodać przepis</h4>
   <div class="row">
     <div class="col-md-12 col-lg-6">
       <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="row form-fields-custom">
           <div class="col-6">
             <label for="name">Dodaj nazwę przepisu</label>
-            <input id="name" name="name"ngModel required/>
+            <input id="name" name="name" ngModel required />
           </div>
           <div class="col-6">
             <label for="description">Dodaj opis przepisu</label>
-            <textarea id="description" name="description" ngModel required ></textarea>
+            <textarea
+              id="description"
+              name="description"
+              ngModel
+              required
+            ></textarea>
           </div>
           <div class="col-6">
             <label for="steps">Dodaj kroki potrzebne do wykonania</label>
-            <input id="steps" name="steps" ngModel required/>
+            <input id="steps" name="steps" ngModel required />
           </div>
           <div class="col-6">
             <label for="ingredients">Dodaj składniki</label>
-            <input id="ingredients" name="ingredients" ngModel  required/>
+            <input id="ingredients" name="ingredients" ngModel required />
           </div>
         </div>
         <div class="row mt-3">
           <div class="col-12">
-            <button type="submit" class="btn btn-success">
-              Zatwierdz
+            <div *ngIf="f.valid">Dziękujemy za wypełnienie</div>
+            <div *ngIf="!f.valid">Proszę o wypełnienie wszystkich pól</div>
+            <hr>
+            <button type="submit" class="btn btn-success" id="btn-1">
+              Zatwierdź
             </button>
           </div>
         </div>

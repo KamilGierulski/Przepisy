@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { RecipiesComponent } from './recipies/recipies.component';
 import { FormsModule } from '@angular/forms';
 import { RecipiesCreatedComponent } from './recipies/recipies-created/recipies-created.component';
+import { MainviewComponent } from './mainview/mainview.component';
 @NgModule({
   declarations: [
     AppComponent,
     RecipiesComponent,
-    RecipiesCreatedComponent
+    RecipiesCreatedComponent,
+    MainviewComponent
   ],
   imports: [
     BrowserModule,
